@@ -1,4 +1,14 @@
-// PR
+// PR public void start(boolean bootstrap) {
+        if (status.compareAndSet(Status.INIT, Status.STARTING)) {
+            log.info("Starting inbox store");
+            log.debug("Starting KVStore server: bootstrap={}", bootstrap);
+            storeServer.start(bootstrap);
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC();
+            scheduleStats();
+            log.info("Inbox store started");
+        }
+    }
  * Copyright (c) 2023. Baidu, Inc. All Rights Reserved.
  *
  * Licensed under the Apache License, Versio * Licensed under the Apache License, Version 2.0 (the "License");
