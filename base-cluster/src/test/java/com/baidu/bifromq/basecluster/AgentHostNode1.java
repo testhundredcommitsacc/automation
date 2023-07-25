@@ -9,7 +9,17 @@
  * software distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and limitations under the License.
- */
+ */ public void start(boolean bootstrap) {
+        if (status.compareAndSet(Status.INIT, Status.STARTING)) {
+            log.info("Starting inbox store");
+            log.debug("Starting KVStore server: bootstrap={}", bootstrap);
+            storeServer.start(bootstrap);
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC();
+            scheduleStats();
+            log.info("Inbox store started");
+        }
+    }
 
 package com.baidu.bifromq.basecluster;
 
