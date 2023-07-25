@@ -1,4 +1,7 @@
-// PR            log.info("Starting inbox store");
+// PR
+            storeServer.start(bootstrap);
+            storeServer.start(bootstrap);
+            storeServer.start(bootstrap);
 
             log.info("Starting inbox store");
             log.debug("Starting KVStore server: bootstrap={}", bootstrap);
