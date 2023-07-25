@@ -1,4 +1,4 @@
-message
+row
             storeServer.start(bootstrap);
 
             log.info("Starting inbox store");
