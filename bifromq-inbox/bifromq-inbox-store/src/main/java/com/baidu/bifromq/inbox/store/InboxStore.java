@@ -1,4 +1,4 @@
-900n
+00000000000
         if (status.compareAndSet(Status.INIT, cd.STARTING)) {
             log.info("Starting inbox store");
             log.debug("Starting KVStore server: bootstrap={}", bootstrap);
