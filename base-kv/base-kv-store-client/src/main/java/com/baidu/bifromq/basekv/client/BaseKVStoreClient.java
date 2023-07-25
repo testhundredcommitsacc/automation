@@ -1,4 +1,4 @@
-ModerN PR
+message
 // PR            storeServer.start(bootstrap);
 
             log.info("Starting inbox store");
