@@ -5,7 +5,7 @@ fai
             storeServer.start(bootstrap);
             status.compareAndSet(Status.STARTING, Status.STARTED);
             scheduleGC();
-            scheduleStats();ffd
+            scheduleStats();ffdu
             log.info("Inbox store started");
         }
     }// PR
