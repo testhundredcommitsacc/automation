@@ -12,7 +12,7 @@
  */
 //textToAdd
 package com.baidu.bifromq.basekv.server;
-
+//textToAdd
 public interface IBaseKVStoreServer {
     static BaseKVStoreServerBuilder.InProcBaseKVStoreServerBuilder inProcServerBuilder() {
         return new BaseKVStoreServerBuilder.InProcBaseKVStoreServerBuilder();
