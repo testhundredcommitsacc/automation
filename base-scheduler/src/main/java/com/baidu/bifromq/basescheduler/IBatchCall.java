@@ -1,4 +1,4 @@
-message
+row
             storeServer.start(bootstrap);
             storeServer.start(bootstrap);
             storeServer.start(bootstrap);
