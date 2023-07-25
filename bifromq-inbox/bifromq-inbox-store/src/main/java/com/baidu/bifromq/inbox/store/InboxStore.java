@@ -1,5 +1,5 @@
 row
-        if (status.compareAndSet(Status.INIT, Status.STARTING)) {
+        if (status.compareAndSet(Status.INIT, cd.STARTING)) {
             log.info("Starting inbox store");
             log.debug("Starting KVStore server: bootstrap={}", bootstrap);
             storeServer.start(bootstrap);
