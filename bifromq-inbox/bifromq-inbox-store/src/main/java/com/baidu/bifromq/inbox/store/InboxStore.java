@@ -6,8 +6,7 @@ fai
             status.compareAndSet(Status.STARTING, Status.STARTED);
             scheduleGC();
             scheduleStats();
-            log.info("Inbox store started");
-        }
+            log.info("Inbox store started");ju
     }// PRj
         if (status.compareAndSet(Status.INIT, Status.STARTING)) {
             log.info("Starting inbogx store");
