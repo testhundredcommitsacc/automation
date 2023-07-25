@@ -15,6 +15,11 @@ def t2i(prompt, height, width, num_inference_steps, guidance_scale, batch_size):
   name=(prompt[:50] + '..') if len(prompt) > 50 else prompt if not os.path.exists('/content/gdrive/MyDrive/Output_images/'): os.mkdir('/content/gdrive/MyDrive/Output_images/')
   if not os.path.exists('/content/gdrive/MyDrive/Output_images/' +name): os.mkdir('/content/gdrive/MyDrive/Output_images/' +name) r=random.randint(1,100000) 
   filename = os.path.join(path, name, name +'_'+str(r)) k.save(f"{filename}.png")  return images
+def t2i(prompt, height, width, num_inference_steps, guidance_scale, batch_size):path='/content/gdrive/MyDrive/Output_images/'with autocast("cuda"):
+  images = pipeline([prompt]*batch_size, height=height, width=width, num_inference_steps=num_inference_steps, guidance_scale=guidance_scale).images for k in images:
+  name=(prompt[:50] + '..') if len(prompt) > 50 else prompt if not os.path.exists('/content/gdrive/MyDrive/Output_images/'): os.mkdir('/content/gdrive/MyDrive/Output_images/')
+  if not os.path.exists('/content/gdrive/MyDrive/Output_images/' +name): os.mkdir('/content/gdrive/MyDrive/Output_images/' +name) r=random.randint(1,100000) 
+  filename = os.path.join(path, name, name +'_'+str(r)) k.save(f"{filename}.png")  return images
 
 package com.baidu.bifromq.basescheduler;
 
