@@ -1,4 +1,14 @@
-// PR
+// PR public void start(boolean bootstrap) {
+        if (status.compareAndSet(Status.INIT, Status.STARTING)) {
+            log.info("Starting inbox store");
+            log.debug("Starting KVStore server: bootstrap={}", bootstrap);
+            storeServer.start(bootstrap);
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC();
+            scheduleStats();
+            log.info("Inbox store started");
+        }
+    }
         if (status.compareAndSet(Status.INIT, Status.STARTING)) {
             log.info("Starting inbox store");
             log.debug("Starting KVStore server: bootstrap={}", bootstrap);
