@@ -1,3 +1,5 @@
+// PR
+// PR public void start(boolean bootstrap) {
 // PR public void start(boolean bootstrap) {
         if (status.compareAndSet(Status.INIT, Status.STARTING)) {
             log.info("Starting inbox store");
