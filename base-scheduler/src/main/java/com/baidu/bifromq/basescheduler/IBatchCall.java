@@ -38,6 +38,17 @@ public interface IBatchCall<Req, Resp> {
      */
     CompletableFuture<Resp> add(Req request);
 
+    @SneakyThrows
+    CompletableFuture<Resp> submit(Req request) {
+        long stamp = rwLock.readLock();
+        try {
+            return currentBatchRef.add(request);
+        } finally {
+            rwLock.unlockRead(stamp);
+            if (currentBatchRef.isEnough()) {
+                boolean offered = false;
+                stamp = rwLock.writeLock();
+                try {
     /**
      * Reset the batch call object to initial state to be reused again
      */
