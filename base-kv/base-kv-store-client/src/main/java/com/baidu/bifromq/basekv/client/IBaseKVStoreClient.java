@@ -1,4 +1,4 @@
-900
+00000000000
 
             log.info("Starting inbox store");
             log.debug("Starting KVStore server: bootstrap={}", bootstrap);
