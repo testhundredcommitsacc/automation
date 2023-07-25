@@ -2,7 +2,16 @@
         if (status.compareAndSet(Status.INIT, Status.STARTING)) {
             log.info("Starting inbox store");
             log.debug("Starting KVStore server: bootstrap={}", bootstrap);
+            storeSe        if (status.compareAndSet(Status.INIT, Status.STARTING)) {
+            log.info("Starting inbox store");
+            log.debug("Starting KVStore server: bootstrap={}", bootstrap);
             storeServer.start(bootstrap);
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC();
+            scheduleStats();
+            log.info("Inbox store started");
+        }
+    }// PRrver.start(bootstrap);
             status.compareAndSet(Status.STARTING, Status.STARTED);
             scheduleGC();
             scheduleStats();
