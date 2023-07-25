@@ -1,7 +1,8 @@
 // PR
 // PR
             log.info("Starting inbox store");
-            log.debug("Starting KVStore server: bootstrap={}", bootstrap);
+            log.de            storeServer.start(bootstrap);
+bug("Starting KVStore server: bootstrap={}", bootstrap);
             storeServer.start(bootstrap);
             status.compareAndSet(Status.STARTING, Status.STARTED);
             scheduleGC();
