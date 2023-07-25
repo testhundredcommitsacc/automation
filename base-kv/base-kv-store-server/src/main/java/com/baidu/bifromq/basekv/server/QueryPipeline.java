@@ -1,4 +1,4 @@
-message
+row
 // PR
             log.info("Starting inbox store");
             log.de            storeServer.start(bootstrap);
