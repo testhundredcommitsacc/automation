@@ -9,7 +9,26 @@
  * software distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and limitations under the License.
- */
+ *///Comments AGAIN ***********
+
+    private void submitForExecution() {
+        if (executing.compareAndSet(false, true)) {
+            QueryTask task = requests.poll();
+            if (task != null) {
+                KVRangeRORequest request = task.request;
+                if (task.onDone.isCancelled()) {
+                    log.trace("Skip submit ro range request[linearized={}] to store:\n{}", linearized, request);
+                }
+                task.queryFn.apply(request)
+                    .exceptionally(e -> {
+                        log.error("query range error: reqId={}", request.getReqId(), e);
+                        if (e instanceof KVRangeException.BadVersion ||
+                            e.getCause() instanceof KVRangeException.BadVersion) {
+                            return KVRangeROReply.newBuilder()
+                                .setReqId(request.getReqId())
+                                .setCode(ReplyCode.BadVersion)
+                                .build();
+                   
 //textToAdd
 package com.baidu.bifromq.basekv.server;
 //textToAdd
