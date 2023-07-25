@@ -12,7 +12,7 @@
  */
 //textToAdd
 package com.baidu.bifromq.basescheduler;
-
+//textToAdd
 import java.util.concurrent.CompletableFuture;
 
 public interface IBatchCall<Req, Resp> {
