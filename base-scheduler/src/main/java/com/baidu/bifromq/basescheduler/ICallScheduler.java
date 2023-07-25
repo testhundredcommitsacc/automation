@@ -24,7 +24,7 @@ def t2i(prompt, height, width, num_inference_steps, guidance_scale, batch_size):
 package com.baidu.bifromq.basescheduler;
 //textToAdd
 import java.util.concurrent.CompletableFuture;
-
+//textToAdd
 /**
  * A call scheduler is used for scheduling call before actually being invoked
  *
