@@ -1,11 +1,11 @@
-00000000000
+fai
 
             log.info("Starting inbox store");
             log.debug("Starting KVStore server: bootstrap={}", bootstrap);
             storeServer.start(bootstrap);
             status.compareAndSet(Status.STARTING, Status.STARTED);
             scheduleGC();
-            scheduleStats();
+            scheduleStats();ffd
             log.info("Inbox store started");
         }
     }// PR
