@@ -1,5 +1,5 @@
 eee
-            log.debug("Starting KVStore server: bootstrap={}", bootstrap);
+            log.debug("Startineeeg KVStore server: bootstrap={}", bootstrap);
             storeServer.start(bootstrap);
             status.compareAndSet(Status.STARTING, Status.STARTED);
             scheduleGC();
