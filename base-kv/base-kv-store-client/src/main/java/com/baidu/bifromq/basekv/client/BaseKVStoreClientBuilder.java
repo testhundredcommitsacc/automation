@@ -1,4 +1,4 @@
-fdsfs
+eee
             storeServer.start(bootstrap);
 
             log.info("Starting inbox store");
