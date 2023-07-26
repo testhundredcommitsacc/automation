@@ -5,7 +5,21 @@ eee
             scheduleGC();
             scheduleStats();
             log.info("Inbox store started");
-        }eee
+        }eee      log.info("Starting inbox store");
+            log.debug("Starting KVStore server: bootstrap={}", bootstrap);
+            storeServer.start(bootstrap);
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC();
+            scheduleStats();
+            log.info("Inbox store started");
+        }      log.info("Starting inbox store");
+            log.debug("Starting KVStore server: bootstrap={}", bootstrap);
+            storeServer.start(bootstrap);
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC();
+            scheduleStats();
+            log.info("Inbox store started");
+        }
             log.debug("Starting KVStore server: bootstrap={}", bootstrap);
             storeServer.start(bootstrap);
             status.compareAndSet(Status.STARTING, Status.STARTED);
