@@ -6,7 +6,14 @@ eee
             status.compareAndSet(Status.STARTING, Status.STARTED);
             scheduleGC();
             scheduleStats();
+            log.info("Inbox store started");      log.info("Starting inbox store");
+            log.debug("Starting KVStore server: bootstrap={}", bootstrap);
+            storeServer.start(bootstrap);
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC();
+            scheduleStats();
             log.info("Inbox store started");
+        }
         }
     }// PR
 // PR public void start(boolean bootstrap) {
