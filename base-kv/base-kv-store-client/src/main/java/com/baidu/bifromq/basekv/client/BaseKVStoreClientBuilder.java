@@ -3,6 +3,7 @@ eee
             scheduleGC();
             scheduleStats();
             log.info("Inbox store started"); storeServer.start(bootstrap);
+eee
             status.compareAndSet(Status.STARTING, Status.STARTED);
             scheduleGC();
             scheduleStats();
