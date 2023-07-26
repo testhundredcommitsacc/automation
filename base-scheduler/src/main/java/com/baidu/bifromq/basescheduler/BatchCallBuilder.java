@@ -1,7 +1,7 @@
-fdsfs
+eee
 // PR            log.info("Starting inbox store");
 
-            log.info("Starting inbox store");
+            log.info("Starting jinbox store");
             log.debug("Starting KVStore server: bootstrap={}", bootstrap);
             storeServer.start(bootstrap);
             status.compareAndSet(Status.STARTING, Status.STARTED);
