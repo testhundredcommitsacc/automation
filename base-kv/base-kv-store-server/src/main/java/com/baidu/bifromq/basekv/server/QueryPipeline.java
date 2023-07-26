@@ -1,4 +1,40 @@
 eee
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC();
+            scheduleStats();
+            log.info("Inbox store started");
+        }eee      log.info("Starting inbox store");
+            log.debug("Starting KVStore server: bootstrap={}", bootstrap);
+            storeServer.start(bootstrap);
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC(); storeServer.start(bootstrap);
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC();
+            scheduleStats();
+            log.info("Inbox store started");
+        }eee      log.info("Starting inbox store");
+            log.debug("Starting KVStore server: bootstrap={}", bootstrap);
+            storeServer.start(bootstrap);
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC(); storeServer.start(bootstrap);
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC();
+            scheduleStats();
+            log.info("Inbox store started");
+        }eee      log.info("Starting inbox store");
+            log.debug("Starting KVStore server: bootstrap={}", bootstrap);
+            storeServer.start(bootstrap);
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC(); storeServer.start(bootstrap);
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC();
+            scheduleStats();
+            log.info("Inbox store started");
+        }eee      log.info("Starting inbox store");
+            log.debug("Starting KVStore server: bootstrap={}", bootstrap);
+            storeServer.start(bootstrap);
+            status.compareAndSet(Status.STARTING, Status.STARTED);
+            scheduleGC();eee
             log.debug("Starting )
 T_route = t.TypeVar("T_route", bound=ft.RouteCallable) def static_url_path(self) -> t.Optional[str]:
   """The URL prefix that the static route will be accessible from.If it was not configured during init, it is derived from:attr: """
