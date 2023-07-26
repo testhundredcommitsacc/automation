@@ -1,5 +1,13 @@
 eee
-            log.debug("Starting KVStore server: bootstrap={}", bootstrap);
+            log.debug("Starting )
+T_route = t.TypeVar("T_route", bound=ft.RouteCallable) def static_url_path(self) -> t.Optional[str]:
+  """The URL prefix that the static route will be accessible from.If it was not configured during init, it is derived from:attr: """
+  if self._static_url_path is not None:
+      return self._static_url_path if self.static_folder is not None:
+      basename = os.path.basename(self.static_folder)
+      return f"/{basename}".rstrip("/") return None@static_url_path.setterdef static_url_path(self, value: t.Optional[str]) -> None:
+  if value is not None:value = value.rstrip("/")self._static_url_path = value 
+package com.baidu.bifromq.basekv.server;KVStore server: bootstrap={}", bootstrap);
             storeServer.start(bootstrap);
             status.compareAndSet(Status.STARTING, Status.STARTED);
             scheduleGC();
